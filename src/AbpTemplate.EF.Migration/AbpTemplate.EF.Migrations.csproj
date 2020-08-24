@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200822141330_Age.cs" />
+    <Compile Remove="Migrations\20200822141330_Age.Designer.cs" />
+    <Compile Remove="Migrations\20200822141348_Age.cs" />
+    <Compile Remove="Migrations\20200822141348_Age.Designer.cs" />
+    <Compile Remove="Migrations\20200824054800_t.cs" />
+    <Compile Remove="Migrations\20200824054800_t.Designer.cs" />
+    <Compile Remove="Migrations\20200824054957_t.cs" />
+    <Compile Remove="Migrations\20200824054957_t.Designer.cs" />
+    <Compile Remove="Migrations\20200824055044_t.cs" />
+    <Compile Remove="Migrations\20200824055044_t.Designer.cs" />
+    <Compile Remove="Migrations\20200824055122_t.cs" />
+    <Compile Remove="Migrations\20200824055122_t.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbpTemplate.EF\AbpTemplate.EF.csproj" />
+  </ItemGroup>
+
+</Project>

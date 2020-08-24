@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+    <PackageReference Include="Volo.Abp" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.AspNetCore.SignalR" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.Emailing" Version="3.0.5" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbpTemplate.App.EntitiesUpdate\AbpTemplate.App.EntitiesUpdate.csproj" />
+    <ProjectReference Include="..\AbpTemplate.EF.Bulk\AbpTemplate.EF.Bulk.csproj" />
+    <ProjectReference Include="..\AbpTemplate.EF.EntityGroups\AbpTemplate.EF.EntityGroups.csproj" />
+    <ProjectReference Include="..\AbpTemplate.EF\AbpTemplate.EF.csproj" />
+  </ItemGroup>
+
+</Project>

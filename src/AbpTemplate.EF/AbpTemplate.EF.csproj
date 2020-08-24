@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.PostgreSql" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbpTemplate.Domain\AbpTemplate.Domain.csproj" />
+    <ProjectReference Include="..\AbpTemplate.EF.EntityGroups\AbpTemplate.EF.EntityGroups.csproj" />
+  </ItemGroup>
+
+</Project>

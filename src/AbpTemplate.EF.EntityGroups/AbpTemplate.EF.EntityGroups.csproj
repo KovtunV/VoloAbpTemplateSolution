@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp" Version="3.0.5" />
+    <PackageReference Include="Z.EntityFramework.Plus.EFCore" Version="3.0.59" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbpTemplate.Domain\AbpTemplate.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
