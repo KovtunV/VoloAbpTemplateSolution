@@ -1,5 +1,6 @@
 ﻿using AbpTemplate.EF.EntityGroups;
 using AbpTemplate.EF.Extensions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.PostgreSql;
@@ -28,7 +29,8 @@ namespace AbpTemplate.EF
 
             Configure<AbpDbContextOptions>(options =>
             {
-                options.UseNpgsql(o => o.UseProjectMigrations());
+                options.UseNpgsql(o => o.UseProjectMigrations()
+                                        .UseQuerySplittingBehavior(QuerySplittingBehavior.SingleQuery));
             });
         }
     }

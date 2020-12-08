@@ -41,17 +41,12 @@ namespace AbpTemplate.WebApi.Start
 
             ConfigureAuthentication(context, configuration);
             ConfigureSwaggerServices(services);
-            FixExceptionToErrorInfoConverter(services);
+            ConfigureSendExceptionsDetailsToClients(services);
         }
 
-        private void FixExceptionToErrorInfoConverter(IServiceCollection services)
+        private void ConfigureSendExceptionsDetailsToClients(IServiceCollection services)
         {
-            var descriptor = new ServiceDescriptor(
-                typeof(IExceptionToErrorInfoConverter),
-                typeof(FIX_ExceptionToErrorInfoConverter),
-                ServiceLifetime.Transient);
-
-            services.Replace(descriptor);
+            services.Configure<AbpExceptionHandlingOptions>(c => c.SendExceptionsDetailsToClients = true);
         }
 
         private void ConfigureAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
@@ -127,7 +122,7 @@ namespace AbpTemplate.WebApi.Start
             {
                 app.UseExceptionHandler("/Error");
             }
-            
+
             app.UseStaticFiles();
             app.UseRouting();
             app.UseAuthentication();

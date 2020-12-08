@@ -11,11 +11,10 @@ namespace AbpTemplate.App.Services.ATest
     {
         public async Task<IList<CityDto>> TestAsync()
         {
-            var cities = await City.GetCities().ToListAsync();
-            var countries = await Country.GetCountries().ToListAsync();
+            var cities = await City.GetCities().Include(q => q.Country).ToListAsync();
+            var countries = await Country.GetCountries().Include(q => q.Cities).ToListAsync();
 
-            IsTrue(false, "df");
-            var dtos = cities.Select(s => Map(s).To<CityDto>()).ToList();
+            var dtos = cities.Select(Map<CityDto>).ToList();
             return dtos;
         }
     }

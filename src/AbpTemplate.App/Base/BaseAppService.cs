@@ -1,7 +1,7 @@
 ﻿using AbpTemplate.App.EntitiesUpdate;
 using Microsoft.AspNetCore.Http;
 using Volo.Abp;
-using Volo.Abp.ObjectMapping;
+using AbpTemplate.App.Utils;
 
 namespace AbpTemplate.App.Base
 {
@@ -9,28 +9,9 @@ namespace AbpTemplate.App.Base
     {
         #region Mapper
 
-        protected MapHelper<TSource> Map<TSource>(TSource source)
+        protected TDest Map<TDest>(object source)
         {
-            // I've done it, bacause don't want to write <TypeFrom, TypeTo>
-            return new MapHelper<TSource>(ObjectMapper, source);
-        }
-
-        // I have no idea why IObjectMapper doesn't contain a Map<TDest> method
-        protected class MapHelper<TSource>
-        {
-            private IObjectMapper _mapper;
-            private TSource _source;
-
-            public MapHelper(IObjectMapper mapper, TSource source)
-            {
-                _mapper = mapper;
-                _source = source;
-            }
-
-            public TDest To<TDest>()
-            {
-                return _mapper.Map<TSource, TDest>(_source);
-            }
+            return ObjectMapper.Map<TDest>(source);
         }
 
         #endregion
