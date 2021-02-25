@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using AbpTemplate.Synchronization.Cache;
+using AbpTemplate.App.Synchronization.Cache;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.Uow;
 
-namespace AbpTemplate.Synchronization
+namespace AbpTemplate.App.Synchronization
 {
     public class SynchronizationService : ITransientDependency
     {

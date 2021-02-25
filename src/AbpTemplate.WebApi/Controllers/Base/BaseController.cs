@@ -1,4 +1,4 @@
-﻿using AbpTemplate.Synchronization;
+﻿using AbpTemplate.App.Synchronization;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;

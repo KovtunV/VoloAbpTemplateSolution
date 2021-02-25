@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace AbpTemplate.Synchronization.Cache
+namespace AbpTemplate.App.Synchronization.Cache
 {
-    public struct LockGroup : IEquatable<LockGroup>
+    public readonly struct LockGroup : IEquatable<LockGroup>
     {
         private readonly int _id;
         private readonly string _lockName;

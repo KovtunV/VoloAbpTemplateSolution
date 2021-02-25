@@ -2,7 +2,7 @@
 using System.Threading;
 using Volo.Abp.DependencyInjection;
 
-namespace AbpTemplate.Synchronization.Cache
+namespace AbpTemplate.App.Synchronization.Cache
 {
     public class LockerCache : ISingletonDependency
     {
